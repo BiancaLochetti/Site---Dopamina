@@ -1,0 +1,290 @@
+/* style.css */
+.libre-franklin-dopamina {
+  font-family: "Libre Franklin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.bona-nova-sc-regular {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;;
+  margin: 0;
+  background-color: #333;
+  color: #333;
+}
+.Title{
+  margin: 0 auto;
+  color: black;
+  text-decoration: none;
+  font-family: "Bona Nova SC", serif;
+  font-size: larger;
+}
+
+header {
+  background-color: rgb(230, 211, 199);
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.CenterLogo{
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex; 
+  
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  width: 100px;
+  height: auto;
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.buttons {
+  display: flex;
+}
+.login{
+  padding: 10px 20px;
+ 
+}
+
+.register {
+  background-color: #93032e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 10px;
+}
+.register {
+  background-color: #93032e;
+  border-radius: 50PX;
+}
+
+.login:hover, .register:hover {
+  background-color: #93032e;
+}
+
+.hero {
+  background-color: rgb(230, 211, 199);
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-content {
+  text-align: center;
+  margin-right: 50px;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.cta {
+  background-color: #93032e;
+  color: #fff;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none; /* Remove a underline do link */
+  display: inline-block; /* Para o link se comportar como um botão */
+  transition: background-color 0.3s;
+}
+
+.cta:hover {
+  background-color: #750c24; /* Alterei o hover para um tom mais escuro */
+}
+
+.hero-image {
+  width: 400px;
+  height: auto;
+  border-radius: 200%; /* Add this line to make the image circular */
+  overflow: hidden; /* Add this line to hide the excess image */
+  background-color: rgb(177, 173, 173); /* Add this line to add a white background to the circle */
+  padding: 60px; /* Add this line to add some padding to the circle */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add this line to add a subtle shadow to the circle */
+}
+.cta-section {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.cta-section h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.cta-item {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-item img {
+  width: 50px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.cta-item a {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.cta-item p {
+  font-size: 16px;
+  color: #555;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .hero-content {
+    margin-right: 0;
+  }
+
+  .hero-image {
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .cta-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.login:hover {
+    text-decoration: none;
+    background-color: rgb(230, 211, 199) ;
+
+}
+
+.register:hover {
+  background-color: #750c24; 
+}
+/* Alinhamento do header */
+header {
+  display: flex; /* Habilita o flexbox para o header */
+  justify-content: space-between; /* Distribui o espaço entre os elementos */
+  align-items: center; /* Alinha os elementos verticalmente ao centro */
+}
+.CenterLogo {
+  display: flex;
+  align-items: center; /* Alinha os elementos verticalmente ao centro */
+}
+
+/* Responsividade para telas menores */
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .nav-toggle.active {
+    background-color: #333;
+    color: #fff;
+  }
+}
+

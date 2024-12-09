@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Técnicas de Produtividade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&family=Bona+Nova&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="/imagens/dopamina-logo.png" type="image/x-icon">
+  <style>
+    /* Adicionando as fontes no estilo */
+    .libre-franklin-dopamina {
+      font-family: "Libre Franklin", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    .bona-nova-sc-regular {
+      font-family: "Bona Nova", serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: rgb(230, 211, 199);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #93032e;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-family: "Libre Franklin", sans-serif;
+    }
+
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 700px;
+      background-color: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .carousel {
+      display: flex;
+      transition: transform 0.5s ease;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      padding: 2rem;
+      text-align: left;
+    }
+
+    .carousel-item h2 {
+      color: #93032e;
+      margin-bottom: 1rem;
+      font-family: "Libre Franklin", sans-serif;
+    }
+
+    .carousel-item p {
+      line-height: 1.6;
+      color: #555;
+      text-align: justify;
+      font-family: "Bona Nova", serif;
+    }
+
+    .carousel-buttons {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      transform: translateY(-50%);
+      z-index: 1;
+    }
+
+    .carousel-buttons button {
+      background-color: #93032e;
+      color: #fff;
+      border: none;
+      padding: 0.5rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      border-radius: 50%;
+      pointer-events: all;
+      transition: background-color 0.3s;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .carousel-buttons button:hover {
+      background-color: #7a0222;
+    }
+
+    .carousel-buttons button:focus {
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1 class="libre-franklin-dopamina">Técnicas de Produtividade</h1>
+
+  <div class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item">
+        <h2 class="libre-franklin-dopamina">1. Pomodoro</h2>
+        <p class="bona-nova-sc-regular">A técnica Pomodoro é famosa por sua eficácia em aumentar a produtividade. Ela funciona dividindo seu tempo em blocos de 25 minutos de trabalho, seguidos de 5 minutos de pausa. Após quatro blocos, faça uma pausa mais longa, de 15 a 30 minutos. Utilize extensões do navegador ou alarmes no celular para gerenciar o tempo. Esse método ajuda a criar um hábito de foco intenso, tornando-o mais natural e eficaz com o tempo.</p>
+      </div>
+      <div class="carousel-item">
+        <h2 class="libre-franklin-dopamina">2. Flow Time</h2>
+        <p class="bona-nova-sc-regular">Para quem prefere uma abordagem mais flexível, a técnica Flow Time é ideal. Em vez de blocos fixos de tempo, você define o período que deseja trabalhar e faz pausas quando necessário. Marque o tempo de trabalho e de pausa, adaptando a duração conforme sua produtividade. Isso permite que você trabalhe por períodos mais longos quando está mais focado e ajuste os intervalos de acordo com suas necessidades.</p>
+      </div>
+      <div class="carousel-item">
+        <h2 class="libre-franklin-dopamina">3. Auto-foco</h2>
+        <p class="bona-nova-sc-regular">O método Auto-foco se concentra em avançar nas tarefas sem se perder em organização excessiva. Crie três listas: Novas, Recorrentes e Não Finalizadas. Adicione novas tarefas abaixo da linha e trabalhe nas tarefas antigas primeiro. Quando completar uma tarefa, remova-a da lista ou mova-a para a lista apropriada. Essa abordagem simplifica a gestão de tarefas, mantendo o foco em uma tarefa por vez e facilitando a organização sem sobrecarga.</p>
+      </div>
+      <div class="carousel-item">
+        <h2 class="libre-franklin-dopamina">4. Getting Things Done (GTD)</h2>
+        <p class="bona-nova-sc-regular">Desenvolvido por David Allen, o método Getting Things Done é ideal para eliminar preocupações e melhorar o fluxo de trabalho. Siga estas etapas: Colete Informações: Anote todas as tarefas e compromissos em uma plataforma de sua escolha. Processe as Informações: Analise cada tarefa e decida a prioridade. Classifique tarefas rápidas como "feitas em minutos" e tarefas complexas como "projetos". Execute: Trabalhe nas tarefas listadas, focando em uma de cada vez. Revisão Semanal: Revise e reorganize suas tarefas semanalmente para manter a eficácia do sistema.</p>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button id="prev">&#60;</button>
+      <button id="next">&#62;</button>
+    </div>
+  </div>
+
+  <script>
+    let currentIndex = 0;
+    const items = document.querySelectorAll('.carousel-item');
+    const totalItems = items.length;
+
+    function showItem(index) {
+      const offset = -index * 100;
+      document.querySelector('.carousel').style.transform = `translateX(${offset}%)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % totalItems;
+      showItem(currentIndex);
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+      showItem(currentIndex);
+    });
+  </script>
+</body>
+</html>
